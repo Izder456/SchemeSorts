@@ -12,4 +12,11 @@
     (if (= N 1)
     L
     (bubble-sort_len (bubble-up L) (- N 1))))
-  (bubble-sort_len L (length LS)))
+  (bubble-sort_len LS (length LS)))
+
+(define (generate-numbers start end)
+  (do ((i start (+ i 1))
+       (result '() (cons i result)))
+    ((> i end) result)))
+
+(display (bubble-sort (generate-numbers 1 10000)))
